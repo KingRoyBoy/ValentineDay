@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6666;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #gif {
+            display: none;
+            margin-top: 20px;
+        }
+        #response {
+            font-size: 24px;
+            color: #ff6666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine?</h1>
+    <button onclick="showGif()">Yes</button>
+    <button onclick="showPlease()">No</button>
+    <div id="response"></div>
+    <div id="gif">
+        <img src="images/kiss.gif" alt="Bear Kissing">
+    </div>
+    <script>
+        function showGif() {
+            document.getElementById('response').innerText = 'YAYYYYY';
+            document.getElementById('gif').style.display = 'block';
+        }
+
+        function showPlease() {
+            const pleaseMessages = [
+                'Pleaseeeeeee',
+                'Pleeeeeeease',
+                'Pleeaaaseeee',
+                'Pllllleeeeease',
+                'Pleeeeeeeeeeeeease'
+            ];
+            const randomIndex = Math.floor(Math.random() * pleaseMessages.length);
+            document.getElementById('response').innerText = pleaseMessages[randomIndex];
+            document.getElementById('gif').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
